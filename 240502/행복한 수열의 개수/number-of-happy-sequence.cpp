@@ -10,29 +10,29 @@ int main() {
     }
 
     for (int i=0; i<n; i++) {
-        int tmp=board[i][0], cnt=1;
+        int tmp=board[i][0], cnt=1,mx=0;
         for (int j=1; j<n; j++) {
             if (board[i][j]==tmp) cnt++;
             else {
                 cnt=1;
                 tmp=board[i][j];
             }
-            
+            mx=max(cnt,mx);
         }
-        if (cnt>=m) ans++;
+        if (mx>=m) ans++;
     }
 
     for (int i=0; i<n; i++) {
-        int tmp=board[0][i], cnt=1;
+        int tmp=board[0][i], cnt=1,mx=0;
         for (int j=1; j<n; j++) {
             if (board[j][i]==tmp) cnt++;
             else {
                 cnt=1;
                 tmp=board[j][i];
             }
-            
+            mx=max(cnt,mx);
         }
-        if (cnt>=m) ans++;
+        if (mx>=m) ans++;
     }
 
     cout << ans;
