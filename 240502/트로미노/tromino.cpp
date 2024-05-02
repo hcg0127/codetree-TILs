@@ -39,14 +39,14 @@ int main() {
     // ㄱ mirror
     for (int i=0; i<n-1; i++) {
         for (int j=0; j<m-1; j++) {
-            tmp = board[i][j] + board[i][j+1] + board[i][j+1];
+            tmp = board[i][j] + board[i][j+1] + board[i+1][j];
             mx = max(tmp,mx);
         }
     }
     // ㄴ mirror
     for (int i=1; i<n; i++) {
         for (int j=1; j<m; j++) {
-            tmp = board[i][j] + board[i+1][j-1] + board[i+1][j-1];
+            tmp = board[i][j] + board[i+1][j-1] + board[i+1][j];
             mx = max(tmp,mx);
         }
     }
