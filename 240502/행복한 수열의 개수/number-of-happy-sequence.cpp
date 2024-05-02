@@ -8,6 +8,11 @@ int main() {
     for (int i=0; i<n; i++) {
         for (int j=0; j<n; j++) cin >> board[i][j];
     }
+    if (n==1) {
+        if (m==1) cout << 2;
+        else cout << 0;
+        return 0;
+    }
 
     for (int i=0; i<n; i++) {
         int tmp=board[i][0], cnt=1,mx=0;
