@@ -48,10 +48,10 @@ int main() {
     cin >> n >> m >> q;
     for (int i=0; i<n; i++)
         for (int j=0; j<m; j++) cin >> board[i][j];
-    cin >> r >> d;
-    dr = (d=='L') ? 1 : 0;
 
     while (q--) {
+        cin >> r >> d;
+        dr = (d=='L') ? 1 : 0;
         wind(r-1,dr,0);
     }
 
