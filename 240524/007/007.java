@@ -10,18 +10,6 @@ class Password {
         this.y = w;
         this.z = e;
     }
-
-    public void scodePrint() {
-        System.out.println("secret code : " + this.x);
-    }
-
-    public void mpointPrint() {
-        System.out.println("meeting point : " + this.y);
-    }
-
-    public void timePrint() {
-        System.out.println("time : " + this.z);
-    }
 };
 
 public class Main {
@@ -33,8 +21,8 @@ public class Main {
         int c = sc.nextInt();
         
         Password pw = new Password(a,b,c);
-        pw.scodePrint();
-        pw.mpointPrint();
-        pw.timePrint();
+        System.out.println("secret code : " + pw.x);
+        System.out.println("meeting point : " + pw.y);
+        System.out.println("time : " + pw.z);
     }
 }
